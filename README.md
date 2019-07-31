@@ -9,3 +9,6 @@ EmuHawk's source code was altered to follow a training loop:
 2. Advance 4 frames
 3. Send RAM values and screenshot of game to agent
 4. Repeat
+
+# Results
+The Results folder contains match results of two trained agents. Due to the deterministic nature of the game's CPU and the trained agent, there were only a discrete number of possible outcomes for each level of CPU. Saliency was used as a visualization tool to tell what the agent payed attention to in its network's output.
