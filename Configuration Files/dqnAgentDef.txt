@@ -1,0 +1,52 @@
+{
+    "type": "sf_agent",
+
+    "update_mode": {
+        "unit": "timesteps",
+        "batch_size": 50,
+        "frequency": 1
+
+    },
+    "memory": {
+        "type": "replay",
+        "capacity": 1000,
+        "include_next_states": true
+    },
+
+    "optimizer": {
+        "type": "clipped_step",
+        "clipping_value": 0.001,
+        "optimizer": {
+            "type": "adam",
+            "learning_rate": 1e-3
+        }
+    },
+    "batching_capacity": 100,
+    "discount": 0.99,
+    "entropy_regularization": null,
+
+    "target_sync_frequency": 200,
+    "target_update_weight": 1.0,
+
+    "actions_exploration": {
+        "type": "epsilon_anneal",
+        "initial_epsilon": 0.9999,
+        "final_epsilon": 0.2,
+        "timesteps": 4000000
+    },
+    "saver": {
+        "directory": null,
+        "seconds": 600
+    },
+
+    "summarizer": {
+	"steps": 100,
+	"directory": null,
+        "labels": ["graph", "total-loss", "actions", "variables", "reward", "gradients", "losses", "distribution", "print_configuration"]
+    },
+    "execution": {
+        "type": "single",
+        "session_config": null,
+        "distributed_spec": null
+    }
+}

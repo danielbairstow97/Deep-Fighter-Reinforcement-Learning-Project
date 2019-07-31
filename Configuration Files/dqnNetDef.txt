@@ -1,0 +1,35 @@
+[
+    {
+        "type": "conv2d",
+        "size": 8,
+        "window": 3,
+        "stride": 1
+    },
+    {
+        "type": "conv2d",
+        "size": 16,
+        "window": 3,
+        "stride": 1
+
+
+    },
+    {
+        "type": "conv2d",
+        "size": 32,
+        "window": 3,
+        "stride": 1
+    },
+    {
+	"type": "conv2d",
+        "size": 1,
+        "window": 1,
+        "stride": 1
+    },
+    {
+        "type": "flatten"
+    },
+    {
+        "type": "dense",
+        "size": 512
+    }
+]
